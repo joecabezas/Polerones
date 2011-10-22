@@ -1,0 +1,58 @@
+<?php
+class Supplier extends AppModel {
+	var $name = 'Supplier';
+	var $displayField = 'name';
+	var $validate = array(
+		'name' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'phone' => array(
+			'phone' => array(
+				//'rule' => array('phone'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'mail' => array(
+			'email' => array(
+				'rule' => array('email'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+	);
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+	var $hasAndBelongsToMany = array(
+		'Project' => array(
+			'className' => 'Project',
+			'joinTable' => 'projects_suppliers',
+			'foreignKey' => 'supplier_id',
+			'associationForeignKey' => 'project_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		)
+	);
+
+}
+?>
