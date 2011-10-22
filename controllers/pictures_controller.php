@@ -3,12 +3,12 @@ class PicturesController extends AppController {
 
 	var $name = 'Pictures';
 
-	function index() {
+	function admin_index() {
 		$this->Picture->recursive = 0;
 		$this->set('pictures', $this->paginate());
 	}
 
-	function view($id = null) {
+	function admin_view($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid picture', true));
 			$this->redirect(array('action' => 'index'));
@@ -16,7 +16,7 @@ class PicturesController extends AppController {
 		$this->set('picture', $this->Picture->read(null, $id));
 	}
 
-	function add() {
+	function admin_add() {
 		if (!empty($this->data)) {
 			$this->Picture->create();
 			if ($this->Picture->save($this->data)) {
@@ -30,7 +30,7 @@ class PicturesController extends AppController {
 		$this->set(compact('products'));
 	}
 
-	function edit($id = null) {
+	function admin_edit($id = null) {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid picture', true));
 			$this->redirect(array('action' => 'index'));
@@ -50,7 +50,7 @@ class PicturesController extends AppController {
 		$this->set(compact('products'));
 	}
 
-	function delete($id = null) {
+	function admin_delete($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid id for picture', true));
 			$this->redirect(array('action'=>'index'));

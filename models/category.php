@@ -1,13 +1,13 @@
 <?php
-class Institution extends AppModel {
-	var $name = 'Institution';
+class Category extends AppModel {
+	var $name = 'Category';
 	var $displayField = 'name';
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 	var $hasMany = array(
 		'Project' => array(
 			'className' => 'Project',
-			'foreignKey' => 'institution_id',
+			'foreignKey' => 'category_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
