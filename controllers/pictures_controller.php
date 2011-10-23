@@ -10,7 +10,7 @@ class PicturesController extends AppController {
 
 	function admin_view($id = null) {
 		if (!$id) {
-			$this->Session->setFlash(__('Invalid picture', true));
+			$this->Session->setFlash(__('Foto inválida', true));
 			$this->redirect(array('action' => 'index'));
 		}
 		$this->set('picture', $this->Picture->read(null, $id));
@@ -20,8 +20,8 @@ class PicturesController extends AppController {
 		if (!empty($this->data)) {
 			$this->Picture->create();
 			if ($this->Picture->save($this->data)) {
-				$this->Session->setFlash(__('The picture has been saved', true));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('La foto ha sido guardada con éxito.', true));
+				$this->redirect(array('controller' => 'products', 'action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The picture could not be saved. Please, try again.', true));
 			}

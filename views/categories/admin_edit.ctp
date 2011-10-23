@@ -1,13 +1,13 @@
 <div class="categories form">
 <?php echo $this->Form->create('Category');?>
 	<fieldset>
- 		<legend><?php __('Admin Edit Category'); ?></legend>
+ 		<legend><?php __('Editar Categoría'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('name');
+		echo $this->Form->input('name', array('label' => 'Nombre'));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+<?php echo $this->Form->end(__('Enviar', true));?>
 </div>
 <!--
 <div class="actions">

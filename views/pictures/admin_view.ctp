@@ -33,7 +33,7 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
+<!--<div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit Picture', true), array('action' => 'edit', $picture['Picture']['id'])); ?> </li>
@@ -44,3 +44,5 @@
 		<li><?php echo $this->Html->link(__('New Product', true), array('controller' => 'products', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+-->
+<?php echo $this->element('actions_menu'); ?>

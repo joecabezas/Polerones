@@ -1,1 +1,0 @@
-Perfil del Usuario con un Resumen Histórico... creo.

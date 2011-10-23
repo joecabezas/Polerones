@@ -1,14 +1,15 @@
 <div class="types form">
 <?php echo $this->Form->create('Type');?>
 	<fieldset>
- 		<legend><?php __('Admin Edit Type'); ?></legend>
+ 		<legend><?php __('Editar Tipo'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('name');
+		echo $this->Form->input('name', array('label' => 'Nombre'));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+<?php echo $this->Form->end(__('Enviar', true));?>
 </div>
+<!--
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
@@ -19,3 +20,5 @@
 		<li><?php echo $this->Html->link(__('New Product', true), array('controller' => 'products', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+-->
+<?php echo $this->element('actions_menu'); ?>

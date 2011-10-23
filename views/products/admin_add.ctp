@@ -1,27 +1,29 @@
 <div class="products form">
 <?php echo $this->Form->create('Product');?>
 	<fieldset>
- 		<legend><?php __('Admin Add Product'); ?></legend>
+ 		<legend><?php __('Agregar Producto'); ?></legend>
 	<?php
-		echo $this->Form->input('name');
+		echo $this->Form->input('name', array('label' => 'Nombre'));
 
 		if( isset( $this->params['named']['project_id'] ) ){
 			echo $this->Form->input(
 				'project_id',
 				array(
 					'type' => 'hidden',
-					'value' => $this->params['named']['project_id']
+					'value' => $this->params['named']['project_id'],
+					'label' => 'Proyecto al que pertenece este producto:'
 				)
 			);
 		} else {
-			echo $this->Form->input('project_id');
+			echo $this->Form->input('project_id', array('label' => 'Proyecto al que pertenece este producto:'));
 		}
 
-		echo $this->Form->input('type_id');
+		echo $this->Form->input('type_id', array('label' => 'Tipo'));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+<?php echo $this->Form->end(__('Enviar', true));?>
 </div>
+<!--
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
@@ -35,3 +37,5 @@
 		<li><?php echo $this->Html->link(__('New Picture', true), array('controller' => 'pictures', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+-->
+<?php echo $this->element('actions_menu'); ?>

@@ -1,5 +1,5 @@
 <div class="products view">
-<h2><?php  __('Product');?></h2>
+<h2><?php  __('Producto');?></h2>
 	<dl><?php $i = 0; $class = ' class="altrow"';?>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Id'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
@@ -33,6 +33,7 @@
 		</dd>
 	</dl>
 </div>
+<!--
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
@@ -48,6 +49,8 @@
 		<li><?php echo $this->Html->link(__('New Picture', true), array('controller' => 'pictures', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+-->
+<?php echo $this->element('actions_menu'); ?>
 <div class="related">
 	<h3><?php __('Related Pictures');?></h3>
 	<?php if (!empty($product['Picture'])):?>
@@ -85,7 +88,6 @@
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
-
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Picture', true), array('controller' => 'pictures', 'action' => 'add'));?> </li>

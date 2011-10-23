@@ -1,16 +1,17 @@
 <div class="products form">
 <?php echo $this->Form->create('Product');?>
 	<fieldset>
- 		<legend><?php __('Admin Edit Product'); ?></legend>
+ 		<legend><?php __('Editar Producto'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('name');
-		echo $this->Form->input('project_id');
-		echo $this->Form->input('type_id');
+		echo $this->Form->input('name', array('label' => 'Nombre'));
+		echo $this->Form->input('project_id', array('label' => 'Proyecto al que pertenece este producto:'));
+		echo $this->Form->input('type_id', array('label' => 'Tipo'));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+<?php echo $this->Form->end(__('Enviar', true));?>
 </div>
+<!--
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
@@ -25,3 +26,5 @@
 		<li><?php echo $this->Html->link(__('New Picture', true), array('controller' => 'pictures', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+-->
+<?php echo $this->element('actions_menu'); ?>

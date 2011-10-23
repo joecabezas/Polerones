@@ -23,6 +23,7 @@
 		</dd>
 	</dl>
 </div>
+<!--
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
@@ -34,6 +35,8 @@
 		<li><?php echo $this->Html->link(__('New Project', true), array('controller' => 'projects', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+-->
+<?php echo $this->element('actions_menu'); ?>
 <div class="related">
 	<h3><?php __('Related Projects');?></h3>
 	<?php if (!empty($status['Project'])):?>
