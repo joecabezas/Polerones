@@ -41,6 +41,21 @@ a.button:hover {
 	background-image: -moz-linear-gradient(top, #85e573, #4ca83d);
 }
 
+span.tag{
+	background:#62af56;
+	background: -webkit-gradient(linear, left top, left bottom, from(#a8ea9c), to(#62af56));
+	background-image: -moz-linear-gradient(top, #a8ea9c, #62af56);
+	border-color: #2d6324;
+
+	color: #fff;
+	text-shadow: #333 2px 2px 3px;
+
+	padding: 10px;
+	border-radius: 15px;
+
+	font-size: 15px;
+}
+
 a img {
 	border:none;
 }

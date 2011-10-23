@@ -4,8 +4,10 @@
  		<legend><?php __('Admin Edit Picture'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('name');
-		echo $this->Form->input('url');
+
+		echo $this->Form->input('image', array('type' => 'file'));
+		echo $this->Form->input('image_dir', array('type' => 'hidden'));
+
 		echo $this->Form->input('product_id');
 	?>
 	</fieldset>

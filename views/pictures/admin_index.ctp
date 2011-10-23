@@ -3,11 +3,8 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('name');?></th>
-			<th><?php echo $this->Paginator->sort('url');?></th>
+			<th><?php echo $this->Paginator->sort('image');?></th>
 			<th><?php echo $this->Paginator->sort('product_id');?></th>
-			<th><?php echo $this->Paginator->sort('created');?></th>
-			<th><?php echo $this->Paginator->sort('modified');?></th>
 			<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
@@ -20,13 +17,10 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td><?php echo $picture['Picture']['id']; ?>&nbsp;</td>
-		<td><?php echo $picture['Picture']['name']; ?>&nbsp;</td>
-		<td><?php echo $picture['Picture']['url']; ?>&nbsp;</td>
+		<td><?php echo $picture['Picture']['image']; ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($picture['Product']['name'], array('controller' => 'products', 'action' => 'view', $picture['Product']['id'])); ?>
 		</td>
-		<td><?php echo $picture['Picture']['created']; ?>&nbsp;</td>
-		<td><?php echo $picture['Picture']['modified']; ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $picture['Picture']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $picture['Picture']['id'])); ?>

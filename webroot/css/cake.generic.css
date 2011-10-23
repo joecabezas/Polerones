@@ -533,3 +533,73 @@ div.code-coverage-results span.result-ok {
 div.code-coverage-results span.result-good {
 	color: #0a0;
 }
+
+/* Joe */
+span.tag{
+	background: #62AF56;
+	background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#777));
+	background-image: -moz-linear-gradient(top, #a8ea9c, #62af56);
+	border-color: #2D6324;
+	color: white;
+	text-shadow: #333 2px 2px 3px;
+	padding: 5px;
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 300px 300px;
+	border-bottom-right-radius: 300px 300px;
+	border-bottom-left-radius: 0px 15px;
+	font-size: 15px;
+}
+
+span.count{
+	background: #62AF56;
+	background: -webkit-gradient(linear, left top, left bottom, from(#A8EA9C), to(#62AF56));
+	background-image: -moz-linear-gradient(top, #a8ea9c, #62af56);
+	border-color: #2D6324;
+	color: white;
+	text-shadow: #333 2px 2px 3px;
+
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 9px;
+
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 0px 0px;
+	border-bottom-right-radius: 300px 300px;
+	border-bottom-left-radius: 300px 300px;
+	font-size: 15px;
+}
+
+span.pending{
+	background: #62AF56;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fc4), to(#f70));
+	background-image: -moz-linear-gradient(top, #a8ea9c, #62af56);
+	border-color: #2D6324;
+	color: white;
+	text-shadow: #333 2px 2px 3px;
+
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 9px;
+
+	border-radius: 15px;
+	font-size: 15px;
+}
+
+span.finished{
+	background: #62AF56;
+	background: -webkit-gradient(linear, left top, left bottom, from(#A8EA9C), to(#62AF56));
+	background-image: -moz-linear-gradient(top, #a8ea9c, #62af56);
+	border-color: #2D6324;
+	color: white;
+	text-shadow: #333 2px 2px 3px;
+
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 9px;
+
+	border-radius: 15px;
+	font-size: 15px;
+}

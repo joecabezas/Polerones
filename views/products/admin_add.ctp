@@ -4,7 +4,19 @@
  		<legend><?php __('Admin Add Product'); ?></legend>
 	<?php
 		echo $this->Form->input('name');
-		echo $this->Form->input('project_id');
+
+		if( isset( $this->params['named']['project_id'] ) ){
+			echo $this->Form->input(
+				'project_id',
+				array(
+					'type' => 'hidden',
+					'value' => $this->params['named']['project_id']
+				)
+			);
+		} else {
+			echo $this->Form->input('project_id');
+		}
+
 		echo $this->Form->input('type_id');
 	?>
 	</fieldset>

@@ -1,11 +1,22 @@
 <div class="pictures form">
-<?php echo $this->Form->create('Picture');?>
+<?php echo $this->Form->create('Picture', array('type' => 'file'));?>
 	<fieldset>
  		<legend><?php __('Admin Add Picture'); ?></legend>
 	<?php
-		echo $this->Form->input('name');
-		echo $this->Form->input('url');
-		echo $this->Form->input('product_id');
+		echo $this->Form->input('image', array('type' => 'file'));
+		echo $this->Form->input('image_dir', array('type' => 'hidden'));
+
+		if( isset( $this->params['named']['product_id'] ) ){
+			echo $this->Form->input(
+				'product_id',
+				array(
+					'type' => 'hidden',
+					'value' => $this->params['named']['product_id']
+				)
+			);
+		} else {
+			echo $this->Form->input('product_id');
+		}
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>

@@ -75,10 +75,12 @@
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
-
+<!--
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Project', true), array('controller' => 'projects', 'action' => 'add'));?> </li>
 		</ul>
 	</div>
 </div>
+-->
+<?php echo $this->element('actions_menu'); ?>

@@ -10,7 +10,8 @@ class Product extends AppModel {
 			'foreignKey' => 'project_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => ''
+			'order' => '',
+			'counterCache' => true,
 		),
 		'Type' => array(
 			'className' => 'Type',
@@ -25,7 +26,7 @@ class Product extends AppModel {
 		'Picture' => array(
 			'className' => 'Picture',
 			'foreignKey' => 'product_id',
-			'dependent' => false,
+			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',

@@ -1,16 +1,15 @@
 <div class="projects index">
-	<h2><?php __('Projects');?></h2>
+	<h2><?php __('Proyectos');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('start');?></th>
-			<th><?php echo $this->Paginator->sort('end');?></th>
-			<th><?php echo $this->Paginator->sort('institution_id');?></th>
-			<th><?php echo $this->Paginator->sort('status_id');?></th>
-			<th><?php echo $this->Paginator->sort('category_id');?></th>
-			<th><?php echo $this->Paginator->sort('created');?></th>
-			<th><?php echo $this->Paginator->sort('modified');?></th>
-			<th class="actions"><?php __('Actions');?></th>
+			<th><?php echo $this->Paginator->sort('#productos','product_count');?></th>
+			<th><?php echo $this->Paginator->sort('Inicio', 'start');?></th>
+			<th><?php echo $this->Paginator->sort('Fin', 'end');?></th>
+			<th><?php echo $this->Paginator->sort('Institucion', 'institution_id');?></th>
+			<th><?php echo $this->Paginator->sort('Estado', 'status_id');?></th>
+			<th><?php echo $this->Paginator->sort('Categoría', 'category_id');?></th>
+			<th class="actions"><?php __('Acciones');?></th>
 	</tr>
 	<?php
 	$i = 0;
@@ -21,24 +20,41 @@
 		}
 	?>
 	<tr<?php echo $class;?>>
-		<td><?php echo $project['Project']['id']; ?>&nbsp;</td>
+		<td><span class="tag"><?php echo $project['Project']['id']; ?>&nbsp;</span></td>
+		<td><span class="count"><?php echo $project['Project']['product_count']; ?>&nbsp;</span></td>
 		<td><?php echo $project['Project']['start']; ?>&nbsp;</td>
 		<td><?php echo $project['Project']['end']; ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($project['Institution']['name'], array('controller' => 'institutions', 'action' => 'view', $project['Institution']['id'])); ?>
+			<?php //echo $this->Html->link($project['Institution']['name'], array('controller' => 'institutions', 'action' => 'view', $project['Institution']['id'])); ?>
+			<?php echo $project['Institution']['name']; ?>
+		</td>
+		<td style="width:120px;">
+			<?php //echo $this->Html->link($project['Status']['name'], array('controller' => 'statuses', 'action' => 'view', $project['Status']['id'])); ?>
+			<?php
+				$status_class = 'pending';
+				if( $project['Status']['name'] == 'Terminado' )
+					$status_class = 'finished';
+			?>
+			<span class="<?php echo $status_class; ?>"><?php echo $project['Status']['name']; ?></span>
 		</td>
 		<td>
-			<?php echo $this->Html->link($project['Status']['name'], array('controller' => 'statuses', 'action' => 'view', $project['Status']['id'])); ?>
+			<?php //echo $this->Html->link($project['Category']['name'], array('controller' => 'categories', 'action' => 'view', $project['Category']['id'])); ?>
+			<?php echo $project['Category']['name']; ?>
 		</td>
-		<td>
-			<?php echo $this->Html->link($project['Category']['name'], array('controller' => 'categories', 'action' => 'view', $project['Category']['id'])); ?>
-		</td>
-		<td><?php echo $project['Project']['created']; ?>&nbsp;</td>
-		<td><?php echo $project['Project']['modified']; ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $project['Project']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $project['Project']['id'])); ?>
-			<?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $project['Project']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $project['Project']['id'])); ?>
+			<?php echo $this->Html->link(__('Agregar Producto', true), array('controller' => 'products', 'action' => 'add', 'project_id' => $project['Project']['id'])); ?>
+			<?php
+				echo $this->Html->link(
+					__('Ver', true),
+					array(
+						'controller' => 'products',
+						'action' => 'index',
+						'project_id' => $project['Project']['id']
+					)
+				);
+			?>
+			<?php echo $this->Html->link(__('Editar', true), array('action' => 'edit', $project['Project']['id'])); ?>
+			<?php echo $this->Html->link(__('Borrar', true), array('action' => 'delete', $project['Project']['id']), null, sprintf(__('Seguro desea borrar el proyecto #%s?\n(Esto borrará todos los productos e imágenes que tenga!)', true), $project['Project']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -57,17 +73,4 @@
 		<?php echo $this->Paginator->next(__('next', true) . ' >>', array(), null, array('class' => 'disabled'));?>
 	</div>
 </div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Project', true), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Institutions', true), array('controller' => 'institutions', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Institution', true), array('controller' => 'institutions', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Statuses', true), array('controller' => 'statuses', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Status', true), array('controller' => 'statuses', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Categories', true), array('controller' => 'categories', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Category', true), array('controller' => 'categories', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Products', true), array('controller' => 'products', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Product', true), array('controller' => 'products', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+<?php echo $this->element('actions_menu'); ?>
