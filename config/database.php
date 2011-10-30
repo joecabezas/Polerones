@@ -97,7 +97,7 @@ class DATABASE_CONFIG {
 
 	function __construct(){
 		//debug('env("SERVER_ADDR") = '.env('SERVER_ADDR'));
-		if( in_array(env('SERVER_ADDR'), array('127.0.0.1', '::1')) || !env('SERVER_ADDR')){
+		if( in_array(env('SERVER_ADDR'), array('127.0.0.1', '::1', '192.168.1.102')) || !env('SERVER_ADDR')){
 			//debug('usando db DEV');
 			$this->default = $this->dev;
 		} else {

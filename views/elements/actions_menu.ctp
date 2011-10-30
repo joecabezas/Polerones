@@ -10,6 +10,8 @@
 	</ul>
 	<h3><?php __('Extras'); ?></h3>
 	<ul>
+		<li><?php echo $this->Html->link(__('Ver Mensajes', true), array('controller' => 'messages', 'action' => 'index')); ?> </li>
+		</br>
 		<li><?php echo $this->Html->link(__('Ver Productos', true), array('controller' => 'products', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Nuevo Producto', true), array('controller' => 'products', 'action' => 'add')); ?> </li>
 		</br>

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* 
+/*
 
 Estilos propios para Polerones.com
 Por ZoupPowered.com
@@ -33,19 +33,19 @@ header{
 	background-image: url(../img/bg_polerones_top.jpg);
 	background-position: top center;
 	background-repeat: repeat-x;}
-	
+
 	header h1{line-height: 0;}
-	
+
 	header nav ul li{float: left; margin-right: 5px;}
-	
+
 	header nav ul li a{color: #fff; text-decoration: none;}
-	
+
 		header nav#top ul{height: 26px; float: right;}
-		
+
 			header nav#top ul li{float: left; padding: 3px;}
-		
+
 		header nav#menu{float: right;}
-		
+
 			header nav#menu ul li{
 				min-height: 97px;
 				margin-left: 10px;
@@ -53,16 +53,16 @@ header{
 				background-image: url(none);
 				background-position: bottom left;
 				background-repeat: repeat-x;}
-				
+
 			header nav#menu ul li:hover,
 			header nav#menu ul li.active,
 			header nav#menu ul li.soon{background-image: url(../img/bg_menu.jpg);}
-			
+
 			header nav#menu ul li.soon{
 				opacity:0.6;
-				filter:alpha(opacity:60); 
+				filter:alpha(opacity:60);
 				-moz-opacity:0.6; }
-			
+
 				header nav#menu ul li a{
 					display: block;
 					padding: 30px 20px 0;
@@ -72,11 +72,11 @@ header{
 					letter-spacing: -0.05em;
 					text-shadow:0 1px 1px rgba(1, 1, 0, 0.8);
 					}
-				
+
 				header nav#menu ul li a:hover{text-decoration: none;}
-	
+
 	header div#logo{float: left;}
-	
+
 		header div#logo a img{border: 0;}
 
 
@@ -86,15 +86,17 @@ section#center{width: 100%; display: inline-block;}
 		background-image: url(../img/bg_home.png);
 		background-position: top center;
 		background-repeat: repeat-x;}
-		
+
 		section#center.home section#news-works{margin-top: 60px;}
-		
+
+		section#center.home section#catalog{margin-top: 60px;}
+
 		section#news-works div.header-box h1{
 			display: block;
 			float: left;
 			color: #000;
 			text-shadow:0 1px 1px rgba(0, 0, 0, 0.25);}
-		
+
 		section#news-works div.header-box span{
 			float: left;
 			-moz-border-radius:5px;
@@ -110,10 +112,10 @@ section#center{width: 100%; display: inline-block;}
 			margin: 0 7px;
 			position:relative;
 			text-shadow:0 1px 1px rgba(0, 0, 0, 0.25);}
-			
+
 			section#news-works div.header-box span a{text-decoration: none;}
-		
-		
+
+
 footer{
 	width: 100%;
 	background-color: #000;
@@ -131,7 +133,7 @@ footer{
 		background-image: url(../img/border_left.png);
 		background-position: center right;
 		background-repeat: no-repeat;}
-		
+
 		footer article span{display: block; padding-right: 5px;}
 
 
@@ -149,18 +151,18 @@ footer{
 ul#design{
 	display: inline-block;
 	list-style: none;}
-	
+
 	ul#design li{
 		float:left;
 		margin:0 2px;
 		position: relative;}
-		
+
 	ul#design li img{
 		width: 74px;
 		height: 74px;}
-		
+
 		ul#design li a img{border: 0;}
-		
+
 	ul#design li span{
 		position: fixed;
 		display: none;
@@ -168,24 +170,24 @@ ul#design{
 		margin: -20px 0 0 20px;
 		width: 120px;
 		background-color: #000;
-		-moz-border-radius: 0 5px 5px 5px; 
+		-moz-border-radius: 0 5px 5px 5px;
 		-webkit-border-radius: 0 5px 5px 5px;
-		-ms-border-radius-topleft: 0;  
-		-ms-border-radius-topright: 5px;  
-		-ms-border-radius-bottomleft: 5px;  
+		-ms-border-radius-topleft: 0;
+		-ms-border-radius-topright: 5px;
+		-ms-border-radius-bottomleft: 5px;
 		-ms-border-radius-bottomright: 5px;
 		font-size: 0.8em;
 		color: #fff;
 		opacity:0.9;
-		filter:alpha(opacity:90); 
-		-moz-opacity:0.9; 
+		filter:alpha(opacity:90);
+		-moz-opacity:0.9;
 		}
-	
+
 	ul#design li:hover span{
 		display: block;
 		z-index: 999;
-		}	
-	
+		}
+
 	ul#design li span img{
 		width: 120px;
 		height: 120px;
@@ -202,9 +204,9 @@ div#credit{
 	line-height:1.1em;
 	margin-top:140px;
 	padding-top:35px;
-	}	
-	
-	div#credit a{color: #eee;}		
+	}
+
+	div#credit a{color: #eee;}
 	div#credit a:hover{color: #eee; text-decoration: none;}
-		
+
 .cake-debug{display: ;}

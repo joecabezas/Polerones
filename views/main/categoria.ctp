@@ -1,3 +1,4 @@
+		<?php echo $html->css('catalogo', null, array('inline' => false)); ?>
 		<section id="news-works" class="col_16 col">
 			<div class="header-box">
 				<h1>Catálogo | <?php echo $d['Category']['name']; ?></h1>

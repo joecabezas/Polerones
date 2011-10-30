@@ -50,7 +50,7 @@ class AppController extends Controller {
 		$this->Auth->loginError = "Tu e-mail o contraseña son incorrectos";
 		$this->Auth->authError = "Debes ingresar tu e-mail y password para ingresar";
 
-		if(in_array($this->name, array('Pages', 'Contacto'))) {
+		if(in_array($this->name, array('Pages', 'Main', 'Contacto'))) {
 			$this->Auth->allow('*');
 		}
 	}

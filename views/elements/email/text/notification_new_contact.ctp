@@ -1,10 +1,17 @@
 Estimado administrador <?php echo $data['to']['name'] ?>,
- 
-Hay una nueva cotizacion, con ello, se ha creado un nuevo proyecto
 
-Para responder inmediatamente ingrese a: <?php echo $html->link($html->url(array('controller' => 'projects', 'action' => 'conversacion', $data['config']['thread_id'], 'admin' => true), true));?>
+Ha llegado un nuevo mensaje a traves de www.polerones.com
+Los datos del mensaje son los siguientes:<p>
 
-Para ver una lista con sus proyectos ingrese a: <?php echo $html->link($html->url('/admin', true));?>
+ * Nombre: <?php echo $data['from']['name']; ?>
+
+ * Email: <?php echo $data['from']['mail']; ?>
+
+ * Teléfono: <?php echo $data['from']['phone']; ?>
+
+ * Comuna: <?php echo $data['from']['comuna']; ?>
+
+ * Mensaje: <?php echo $data['from']['content']; ?>
 
 
 Cariños
