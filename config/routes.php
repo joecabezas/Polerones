@@ -28,6 +28,7 @@
  */
 	//Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
 	Router::connect('/', array('controller' => 'main', 'action' => 'index'));
+	Router::connect('/catalogo/*', array('controller' => 'main', 'action' => 'categoria'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
