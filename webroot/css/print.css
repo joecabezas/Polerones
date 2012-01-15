@@ -1,0 +1,83 @@
+/*  1996-2006 Inter Media S.A. Todos los Derechos Reservados. */  
+/*  CSS para proyecto {PROYECTO}                              */
+/*  Version 1.0                                               */
+/*  media: PRINT                      						  */
+/*  Fecha de creación dd/mm/aaaa                              */
+
+/*  HISTORIAL DE MODIFICACIONES                               */
+/*  dd/mm/aaaa Comentario de la modificacion realizada        */
+/*  dd/mm/aaaa Comentario de la modificacion realizada        */
+/*  dd/mm/aaaa Comentario de la modificacion realizada        */
+
+
+
+/*  IMPORTANTE
+  • Los nombres de los estilos deben hacer referencia a la funcionalidad del elemento
+	que se esta definiendo, en ningun caso a caracteristicas gráficas o ubicación, por
+	ejemplo NO NOMBRAR #menu_left o #menu_rojo SI NOMBRAR #menu_principal
+	
+  • NO USAR guiones al centro(-) al nombrar estilos ya que puede generar problemas
+  	si se necesita que el estilo interactue con una funcion javascript o PHP, para
+	separar palabras utilizar guion bajo (_)
+	
+  • Lo ideal es generar el Css para impresión al final de la programacion HTML, CSS
+  	de modo que existan las mismas clases en ambos Css, de no ser posible es importante
+	que cada vez que se cree un estilo nuevo en la versión SCREEN, este sea replicado
+	en la versión PRINT con las características que corresponden.
+	
+  • Se debe privilegiar la utilización de etiquetas HTML por sobre las clases. 
+ 	
+  • Todos los comentarios adicionales a una definición de estilos SON DE AYUDA Y SON BIENVENIDOS
+  	estos deben estar ubicados al principio de la definicion y ser lo mas breve posibles y en un leguaje claro.
+
+ */
+
+
+
+/*  REDEFINICION DE ELEMENTOS HTML  */
+body{}
+
+table{}
+td{}
+
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+h6{}
+
+strong, b{}
+
+a:link{}
+a:visited{}
+a:hover{}
+a:active{}
+
+form{}
+
+label{}
+
+ul{}
+
+button{}
+
+
+/*Estilso Css mas usados*/
+.align_left{text-align:left;}
+.align_right{text-align:right;}
+.align_center{text-align:center;}
+.float_left{float:left;}
+.float_right{float:right;}
+
+
+
+/*ETIQUETAS APLICABLES PARA EL ESTILO DE PAGINA DE ACCESIBILIDAD*/
+#accesibilidad{width: 0; clear: both;}
+#accesibilidad #txt_accesibilidad{width: 0;}
+#accesibilidad #txt_accesibilidad h1{}
+#accesibilidad #txt_accesibilidad h2{}
+#accesibilidad #txt_accesibilidad p{}
+#accesibilidad #iconos_accesibilidad{float: right; width: 0;}
+#accesibilidad #iconos_accesibilidad p{}
+#accesibilidad #iconos_accesibilidad img{}

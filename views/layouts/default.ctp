@@ -1,63 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="es">
 <head>
-	<title>Polerones.com | <?php echo $title_for_layout?></title>
-
-	<meta charset=utf-8>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Polerones.com: Portada</title>
+<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<!--
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	$('#tips').jcarousel({
+        vertical: false,
+		wrap: 'circular',
+        scroll: 1
+    });
 	
-	<?php
-		//echo $html->charset();
-		echo $html->meta('favicon.ico', '/favicon.ico', array('type' => 'icon'));
-		//echo $html->css('cake.generic');
-		echo $html->css('style');
-		//echo $html->css('reset');
-		//echo $html->css('general');
-		//echo $html->css('grid');
-		//echo $html->css('polerones');
+});
+</script>-->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
 
-		echo $html->script('modernizr-2.0.6.min');
-		
-		//scripts personalizadas
-		echo $scripts_for_layout;
-	?>
-	
+<!--[if lt IE 9]>
+<script src="js/ie9.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<![endif]-->
+
+<!--[if IE 6]>
+<script src="js/dd_belatedpng.js"></script>
+<script>
+DD_belatedPNG.fix('div,img,a,span,button,section,article,ul,li,p,h1,h2,h3,h4');
+</script>
+<![endif]-->
+
+<!-- <?php //include php('include/inc_html5.tpl.html')?> -->
+
 </head>
 <body>
-	<div id="container">
-    <header>
-    </header>
-    
-	<?php echo $content_for_layout; ?>
-	
-    <footer>
-    </footer>
-  </div> <!--! end of #container -->
+<!--HEADER-->
+<header>
+	<span id="logo_polerones"><a href="#;">Polerones.com</a></span>
+</header>
+<!--END HEADER-->
 
+<?php echo $content_for_layout; ?>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+<!--FOOTER-->
+<footer>
+	<address>Avda Matta 372<br>2do piso</address>
+    <span class="fono_cel">9 159 3999<br>8 636 2885</span>
+    <span class="fono_fijo">02- 9960069</span>
+</footer>
+<!--END FOOTER-->
 
-
-  <!-- scripts concatenated and minified via ant build script-->
-  <script defer src="js/plugins.js"></script>
-  <script defer src="js/script.js"></script>
-  <!-- end scripts-->
-
-
-  <script> // Change UA-XXXXX-X to be your site's ID
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-  </script>
-
-
-  <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
-  
-	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>

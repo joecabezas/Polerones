@@ -89,9 +89,9 @@ class DATABASE_CONFIG {
 		'driver' => 'mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'polerones',
-		'password' => 'polerones',
-		'database' => 'polerones',
+		'login' => 'poleronesnew',
+		'password' => 'poleronesnew',
+		'database' => 'poleronesnew',
 		'encoding' => 'utf8'
 	);
 

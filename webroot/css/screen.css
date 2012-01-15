@@ -1,0 +1,155 @@
+/*  CSS para proyecto {Futuro Infantil}			              */
+/*  Version 1.0                                               */
+/*  media: SCREEN                      						  */
+/*  Fecha de creación 26/09/2011                              */
+
+/*  HISTORIAL DE MODIFICACIONES                               */
+/*  dd/mm/aaaa Comentario de la modificacion realizada        */
+
+article{margin: 0px; padding: 0px;}
+article, footer, header, section, aside{display: block;margin: 0px; padding: 0px;}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../fonts/gothic_1.eot');
+    src: url('../fonts/gothic_1.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gothic_1.woff') format('woff'),
+         url('../fonts/gothic_1.ttf') format('truetype'),
+         url('../fonts/gothic_1.svg#') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*  REDEFINICION DE ELEMENTOS HTML  */
+body{background:url(../img/html/fondo.jpg) repeat-x 0px 0px #12141B; margin: 0px; padding: 0px; font: 13px Arial, Helvetica, sans-serif; color: #FFF;}
+table{text-align: center;}
+td{}
+
+h1{}
+h2{color: #FF6301; font: bold 22px Arial, Helvetica, sans-serif;}
+h3{}
+h4{}
+h5{}
+h6{}
+
+strong, b{}
+
+a:link{color: #666; text-decoration: underline;}
+a:visited{color: #666; text-decoration: underline;}
+a:hover{color: #666; text-decoration: none;}
+a:active{color: #666; text-decoration: none;}
+
+:focus{outline: none;}
+
+form{margin: 0px; padding: 0px;}
+
+label{margin: 0px; padding: 0px; cursor: pointer;}
+
+ul{}
+
+button{margin: 0px; padding: 0px; cursor: pointer; border: none;}
+
+
+/*Estilso Css mas usados*/
+.align_left{text-align:left;}
+.align_right{text-align:right;}
+.align_center{text-align: center;}
+
+.float_left{float:left;}
+.float_right{float:right;}
+
+
+/*HEADER*/
+header{width: 940px; margin: 0px auto; height: 178px;}
+header #logo_polerones{background: url(../img/html/logo_polerenos.jpg) no-repeat 0px 26px; float: left; padding: 26px 0px 0px 0px; width: 216px; height: 98px; font-size: 1px; letter-spacing: -1px;}
+header #logo_polerones a:link, header #logo_polerones a:visited{width: 216px; height: 98px; display: block; text-indent: -9000px;}
+
+
+
+/*MAIN*/
+#main{width: 940px; margin: 0px auto; padding: 0px 0px 20px 0px; overflow: hidden;}
+
+
+/*HOME: TIPS*/
+#banner_home{width: 800px; margin: 0px; clear: both; padding: 0px 0px 0px 60px; line-height: 130%; height: 317px;}
+#banner_home p{margin: 0px; padding: 0px 30px 20px 0px;}
+#banner_home ul{margin: 0px; padding: 0px; list-style: none; position: absolute; margin-top: -25px; width: 800px;}
+#banner_home ul li{background: url(../img/fotos_banners/img_banner_home_01.jpg) no-repeat 0px 0px; height: 247px; margin: 0px; padding: 80px 0px 0px 540px; float: left;}
+#banner_home button{background: url(../img/botones/bot_cotiza_ahora.png) no-repeat 0px 0px; font-size: 1px; letter-spacing: -1px; margin: 0px 0px 0px -20px; padding: 0px; border: none; cursor: pointer; width: 270px; height: 125px; position: relative;}
+#banner_home img{border: none;}
+#banner_home a:link, #banner_home a:visited{color: #FFF; text-decoration: none;}
+#banner_home a:hover, #banner_home a:active{color: #FFF; text-decoration: none;}
+
+
+/*TIPS*/
+#tips{clear: both; margin: 0px; padding: 0px; width: 940px; overflow: hidden;}
+#tips h2{margin: 0px; padding: 15px 0px 0px 80px; min-height: 74px; color: #FF6301; font: bold 22px Arial, Helvetica, sans-serif;}
+#tips p{margin: 0px; padding: 0px;}
+#tips ul{margin: 0px; padding: 0px; list-style: none;}
+#tips ul li{background: url(../img/html/img_separador_tips.jpg) no-repeat 217px 30px; margin: 0px; padding: 0px 10px 0px 0px; float: left; width: 217px;}
+#tips img{border: none;}
+
+#tips .tips_01 h2{background: url(../img/html/img_n_01.gif) no-repeat 0px 0px;}
+#tips .tips_02 h2{background: url(../img/html/img_n_02.gif) no-repeat 0px 0px;}
+#tips .tips_03 h2{background: url(../img/html/img_n_03.gif) no-repeat 0px 0px;}
+#tips .tips_04 h2{background: url(../img/html/img_n_04.gif) no-repeat 0px 0px; color: #00B715;}
+
+#tips .imagen{text-align: center; margin: 0px; padding: 0px; widows: 227px; height: 150px;}
+
+#tips a:link, #tips a:visited{color: #FFF; text-decoration: none;}
+#tips a:hover, #tips a:active{color: #FFF; text-decoration: underline;}
+
+
+/*OTROS SERVICIOS*/
+#otros_servicios{clear: both; margin: 0px; padding: 0px;}
+#otros_servicios article{float: left; width: 444px; margin: 0px; padding: 0px; min-height: 260px;}
+#otros_servicios p{margin: 0px; padding: 0px;}
+#otros_servicios ul{margin: 0px; padding: 0px; list-style: none;}
+#otros_servicios ul li{margin: 0px; padding: 0px;}
+
+#otros_servicios #servicios_col01{margin-right: 13px; border: 7px solid #9E9F9F;}
+#otros_servicios #servicios_col02{margin: 0px; border: 7px solid #FA7F0D;}
+
+#otros_servicios .imagen{width: 440px; height: 260px; position: relative;}
+#otros_servicios .contenido{background: #000; height: 100px; margin-top: -120px; padding: 10px; opacity: 0.7; position: absolute; width: 424px;}
+#otros_servicios .contenido img{float: right; margin: 0px; padding: 0px;}
+
+#otros_servicios a:link, #otros_servicios a:visited{color: #FFF; text-decoration: none;}
+#otros_servicios a:hover, #otros_servicios a:active{color: #FFF; text-decoration: underline;}
+
+
+/*FOOTER*/
+footer{clear: both; margin: 0px auto; min-height: 60px; width: 940px; color: #FF6301; font: bold 22px Arial, Helvetica, sans-serif;}
+footer address{background: url(../img/html/img_direccion.gif) no-repeat 0px 0px; padding: 0px 0px 0px 65px; margin: 0px; font-style: normal; float: left; width: 350px;}
+footer .fono_cel{background: url(../img/html/img_fono_cel.gif) no-repeat 0px 0px; padding: 0px 0px 0px 50px; float: left; width: 250px;}
+footer .fono_fijo{background: url(../img/html/img_fono_fijo.gif) no-repeat 0px 0px; padding: 10px 0px 0px 60px; float: left; width: 150px; min-height: 50px;}
+
+
+/*JQUERY*/
+#tips .jcarousel-container {width: 940px; margin: 0px; padding: 0px;}
+#tips .jcarousel-direction-rtl {direction: rtl;}
+
+#tips .jcarousel-clip {overflow: hidden;}
+#tips .jcarousel-clip-horizontal{width: 900px; margin: 0px; padding: 0px;}
+
+#tips .jcarousel-next-horizontal {position: absolute; top: 6px; border: 10px solid #000; right: 10px; width: 34px; height: 34px; cursor: pointer; background: url(../img/botones/bot_carrusel_right_footer.gif) no-repeat 0px 0px;}
+#tips .jcarousel-direction-rtl .jcarousel-next-horizontal {left: 5px; right: auto; background: url(../img/botones/bot_carrusel_right_footer.gif) no-repeat 0px 0px;}
+#tips .jcarousel-next-horizontal:hover, #tips .jcarousel-next-horizontal:focus {background: url(../img/botones/bot_carrusel_right_footer.gif) no-repeat 0px 0px;}
+
+#tips .jcarousel-next-disabled-horizontal,
+#tips .jcarousel-next-disabled-horizontal:hover,
+#tips .jcarousel-next-disabled-horizontal:focus,
+#tips .jcarousel-next-disabled-horizontal:active {background: url(../img/botones/bot_carrusel_right_disabled_footer.gif) no-repeat 0px 0px;}
+
+#tips .jcarousel-prev-horizontal {position: absolute; top: 6px; left: 10px; width: 34px; height: 34px; cursor: pointer; background: url(../img/botones/bot_carrusel_left_footer.gif) no-repeat 0px 0px;}
+
+#tips .jcarousel-direction-rtl .jcarousel-prev-horizontal {left: auto; right: 5px; background: url(../img/botones/bot_carrusel_left_footer.gif) no-repeat 0px 0px;}
+
+#tips .jcarousel-prev-disabled-horizontal,
+#tips .jcarousel-prev-disabled-horizontal:hover,
+#tips .jcarousel-prev-disabled-horizontal:focus,
+#tips .jcarousel-prev-disabled-horizontal:active {background: url(../img/botones/bot_carrusel_left_disabled_footer.gif) no-repeat 0px 0px;}
+
+
+
