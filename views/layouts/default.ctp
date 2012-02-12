@@ -40,6 +40,16 @@ DD_belatedPNG.fix('div,img,a,span,button,section,article,ul,li,p,h1,h2,h3,h4');
 <!--HEADER-->
 <header>
 	<span id="logo_polerones"><a href="#;">Polerones.com</a></span>
+	
+	<!-- categories -->
+	<? if(isset($d['Categories'])): ?>
+		<?php foreach($d['Categories'] as $c): ?>
+			<span id="">
+				<?php echo $html->link(array('controller' => 'main', 'action' => 'categoria', $c['Category']['id']));?>
+				<?php echo $c['Category']['name']; ?>
+			</span>
+		<?php endforeach; ?>
+	<?php endif; ?>
 </header>
 <!--END HEADER-->
 

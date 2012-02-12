@@ -4,6 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('name', array('label' => 'Nombre'));?></th>
+			<th><?php echo $this->Paginator->sort('is_in_top_menu', array('label' => 'Aparece en menu superior'));?></th>
 			<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
@@ -17,6 +18,16 @@
 	<tr<?php echo $class;?>>
 		<td><?php echo $category['Category']['id']; ?>&nbsp;</td>
 		<td><?php echo $category['Category']['name']; ?>&nbsp;</td>
+		<td>
+		<?php
+			if($category['Category']['is_in_top_menu'])
+				__('Sí');
+			else
+				__('No');
+			
+		?>
+		&nbsp;
+		</td>
 		<td class="actions">
 			<?php //echo $this->Html->link(__('View', true), array('action' => 'view', $category['Category']['id'])); ?>
 			<?php echo $this->Html->link(__('Editar', true), array('action' => 'edit', $category['Category']['id'])); ?>

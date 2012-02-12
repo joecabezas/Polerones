@@ -22,6 +22,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(255) NOT NULL,
+  `is_in_top_menu` tinyint(1) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`)

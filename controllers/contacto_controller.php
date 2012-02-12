@@ -12,6 +12,7 @@ class ContactoController extends AppController {
 		$this->pageTitle = 'Contactanos';
 
 		if($this->data){
+			
 			//verificar si existe el user
 			/*
 			$user = $this->User->find('first', array('conditions' => array('User.mail' => $this->data['User']['mail'])));
@@ -47,6 +48,8 @@ class ContactoController extends AppController {
 			//adjuntar informacion de todos los admin
 			$admins = $this->User->find('all', array('conditions' => array('privileges' => 0)));
 
+			//debug($admins);
+			
 			//por cada admin encontrado...
 			foreach($admins as $admin){
 				$this->Notifications->to[] = $admin['User'];

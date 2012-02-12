@@ -84,15 +84,12 @@ class NotificationsComponent extends Object {
 
 	function _send($to) {
 
-		//$User = $this->User->read(null,$id);
-		//$this->Email->to = $User['User']['email'];
-
+		//debug('_send');
+		//debug($to);
+		
 		$this->Email->to = $to['mail'];
 
-		//$this->Email->bcc = array('secret@example.com');
-
 		$this->Email->subject = $this->config['subject'];
-		//$this->Email->replyTo = 'no-reply@polerones.com';
 		$this->Email->replyTo = $this->from['mail'];
 		$this->Email->from = $this->from['mail'];
 
@@ -108,6 +105,9 @@ class NotificationsComponent extends Object {
 		$data['config'] = $this->config;
 		$data['from'] = $this->from;
 		$data['to'] = $to;
+		
+		//debug($data);
+		
 		$this->controller->set('data', $data);
 
 		//Do not pass any args to send()

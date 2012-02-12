@@ -37,8 +37,23 @@ class MainController extends AppController {
 		}
 
 		//debug($pictures);
+		
+		//buscar categorias que deban aparecer en portada
+		$this->Category->recursive = 0;
+		$categories = $this->Category->find(
+			'all',
+			array(
+				'conditions' => array(
+					'Category.is_in_top_menu' => '1',
+				),
+				'order' => array(
+					//'Category.created' => 'DESC'
+				),
+			)
+		);
 
 		//encapsular todo
+		$d['Categories'] = $categories;
 		$d['Pictures'] = $pictures;
 		$this->set('d', $d);
 	}

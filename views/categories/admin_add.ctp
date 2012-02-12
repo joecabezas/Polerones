@@ -4,6 +4,7 @@
  		<legend><?php __('Agregar Categoría'); ?></legend>
 	<?php
 		echo $this->Form->input('name', array('label' => 'Nombre'));
+		echo $this->Form->input('is_in_top_menu', array('label' => '¿Aparece en el menu superior, de la pagina principal?'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Enviar', true));?>
