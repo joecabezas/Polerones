@@ -4,8 +4,10 @@ class MainController extends AppController {
 	var $name = 'Main';
 	var $uses = array('Picture', 'Product', 'Status', 'Category');
 
-	function index(){
-
+	function index()
+	{
+		$this->layout = 'home';
+		
 		//traer la lista de ultimas fotos que pertenezcan a productos
 		//cuyos proyectos esten con status = 'Terminado'
 		$this->Picture->recursive = 3;

@@ -9,24 +9,13 @@
 article{margin: 0px; padding: 0px;}
 article, footer, header, section, aside{display: block;margin: 0px; padding: 0px;}
 
-@font-face {
-    font-family: 'Century Gothic';
-    src: url('../fonts/gothic_1.eot');
-    src: url('../fonts/gothic_1.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gothic_1.woff') format('woff'),
-         url('../fonts/gothic_1.ttf') format('truetype'),
-         url('../fonts/gothic_1.svg#') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 /*  REDEFINICION DE ELEMENTOS HTML  */
 body{background:url(../img/html/fondo.jpg) repeat-x 0px 0px #12141B; margin: 0px; padding: 0px; font: 13px Arial, Helvetica, sans-serif; color: #FFF;}
 table{text-align: center;}
 td{}
 
-h1{}
+h1{color: #FC6202; font: bold 28px Arial, Helvetica, sans-serif; text-align: right; margin: 0px 0px 20px 0px; border-bottom: 3px solid #32374A; padding: 17px 0px 7px 0px;}
 h2{color: #FF6301; font: bold 22px Arial, Helvetica, sans-serif;}
 h3{}
 h4{}
@@ -59,31 +48,91 @@ button{margin: 0px; padding: 0px; cursor: pointer; border: none;}
 .float_left{float:left;}
 .float_right{float:right;}
 
+#ico_contacto{background: url(../img/html/ico_tit_contacto.gif) no-repeat 0px 0px;}
+#ico_ropa{background: url(../img/html/ico_tit_ropa.gif) no-repeat 0px 0px; padding-bottom: 12px;}
+
 
 /*HEADER*/
-header{width: 940px; margin: 0px auto; height: 178px;}
+header{width: 940px; margin: 0px auto; height: 177px;}
 header #logo_polerones{background: url(../img/html/logo_polerenos.jpg) no-repeat 0px 26px; float: left; padding: 26px 0px 0px 0px; width: 216px; height: 98px; font-size: 1px; letter-spacing: -1px;}
 header #logo_polerones a:link, header #logo_polerones a:visited{width: 216px; height: 98px; display: block; text-indent: -9000px;}
 
+header ul{
+	margin: 0px;
+	padding: 26px 0px 0px 0px;
+	float: right;
+	list-style: none;
+	width: 455px;
+	/*font-size: 1px;*/
+	letter-spacing: -1px;
+	
+	/*joe*/
+	font-size: 18px;
+	font-weight: bold;
+}
+
+header ul li{
+	margin: 0px;
+	float: left;
+	height: 100px;
+}
+
+header ul li a:link,
+header ul li a:visited{
+	/*height: 100px;*/
+	display: block;
+	
+	/*joe*/
+	
+	padding-top: 27px;
+	padding-left: 10px;
+	
+	color: white;
+	text-decoration: none;
+	text-shadow: 2px 1px 5px black;
+}
+
+header ul li.topmenu {background: url(../img/botones/bot_catalogo.gif) no-repeat 0px 0px; width: 124px;}
+header ul li.topmenu:hover {background: url(../img/botones/bot_catalogo_over.gif) no-repeat 0px 0px; width: 124px;}
+/*header ul li.topmenu a:hover, header ul li.topmenu a:active{background: url(../img/botones/bot_catalogo_over.gif) no-repeat 0px 0px;}*/
+header ul li.topmenu.activo{background: url(../img/botones/bot_catalogo_over.gif) no-repeat 0px 0px;}
+
+header ul li#bot_h_01{background: url(../img/botones/bot_catalogo.gif) no-repeat 0px 0px; width: 124px;}
+header ul li#bot_h_01 a:hover, header ul li#bot_h_01 a:active{background: url(../img/botones/bot_catalogo_over.gif) no-repeat 0px 0px;}
+header ul li#bot_h_01.activo{background: url(../img/botones/bot_catalogo_over.gif) no-repeat 0px 0px;}
+
+header ul li#bot_h_02{background: url(../img/botones/bot_ropa.gif) no-repeat 0px 0px; width: 124px;}
+header ul li#bot_h_02 a:hover, header ul li#bot_h_02 a:active{background: url(../img/botones/bot_ropa_over.gif) no-repeat 0px 0px;}
+header ul li#bot_h_02.activo{background: url(../img/botones/bot_ropa_over.gif) no-repeat 0px 0px;}
+
+header ul li#bot_h_03{background: url(../img/botones/bot_cotiza_ahora.gif) no-repeat 0px 0px; width: 110px;}
+header ul li#bot_h_03 a:hover, header ul li#bot_h_03 a:active{background: url(../img/botones/bot_cotiza_ahora_over.gif) no-repeat 0px 0px;}
+header ul li#bot_h_03.activo{background: url(../img/botones/bot_cotiza_ahora_over.gif) no-repeat 0px 0px;}
+
+header ul li#bot_h_04{background: url(../img/botones/bot_contacto.gif) no-repeat 0px 0px; width: 97px;}
+header ul li#bot_h_04 a:hover, header ul li#bot_h_04 a:active{background: url(../img/botones/bot_contacto_over.gif) no-repeat 0px 0px;}
+header ul li#bot_h_04.activo{background: url(../img/botones/bot_contacto_over.gif) no-repeat 0px 0px;}
 
 
 /*MAIN*/
-#main{width: 940px; margin: 0px auto; padding: 0px 0px 20px 0px; overflow: hidden;}
+#main{background: url(../img/html/fondo_contenidos.jpg) repeat-x 0px 0px #000; clear: both; overflow: hidden;}
+#main.home{background: url(../img/html/fondo_contenidos_home.jpg) repeat-x 0px 0px #000;}
+#main #contenidos{width: 940px; margin: 0px auto; padding: 20px 0px;}
 
 
 /*HOME: TIPS*/
-#banner_home{width: 800px; margin: 0px; clear: both; padding: 0px 0px 0px 60px; line-height: 130%; height: 317px;}
-#banner_home p{margin: 0px; padding: 0px 30px 20px 0px;}
-#banner_home ul{margin: 0px; padding: 0px; list-style: none; position: absolute; margin-top: -25px; width: 800px;}
-#banner_home ul li{background: url(../img/fotos_banners/img_banner_home_01.jpg) no-repeat 0px 0px; height: 247px; margin: 0px; padding: 80px 0px 0px 540px; float: left;}
-#banner_home button{background: url(../img/botones/bot_cotiza_ahora.png) no-repeat 0px 0px; font-size: 1px; letter-spacing: -1px; margin: 0px 0px 0px -20px; padding: 0px; border: none; cursor: pointer; width: 270px; height: 125px; position: relative;}
+#banner_home{background: url(../img/html/fondo_banner_home.gif) repeat-x 0px 0px #383838; margin: 0px; clear: both; padding: 0px; line-height: 130%; height: 270px;}
+#banner_home p{margin: 0px; padding: 0px 30px 10px 0px;}
+#banner_home ul{margin: 0px auto; padding: 0px; list-style: none; width: 800px; height: 270px; overflow: hidden;}
+#banner_home ul li{background: url(../img/fotos_banners/img_banner_home_01.jpg) no-repeat 0px 5px; margin: 0px; height: 220px; padding: 50px 0px 0px 550px; float: left;}
+#banner_home button{background: url(../img/botones/bot_cotiza_ahora.png) no-repeat 0px 0px; font-size: 1px; letter-spacing: -1px; margin: 60px 0px 0px -10px; padding: 0px; border: none; cursor: pointer; width: 270px; height: 125px; position: absolute;}
 #banner_home img{border: none;}
 #banner_home a:link, #banner_home a:visited{color: #FFF; text-decoration: none;}
 #banner_home a:hover, #banner_home a:active{color: #FFF; text-decoration: none;}
 
 
 /*TIPS*/
-#tips{clear: both; margin: 0px; padding: 0px; width: 940px; overflow: hidden;}
+#tips{clear: both; margin: 0px; padding: 20px 0px 0px 0px; width: 940px; overflow: hidden;}
 #tips h2{margin: 0px; padding: 15px 0px 0px 80px; min-height: 74px; color: #FF6301; font: bold 22px Arial, Helvetica, sans-serif;}
 #tips p{margin: 0px; padding: 0px;}
 #tips ul{margin: 0px; padding: 0px; list-style: none;}
@@ -95,7 +144,7 @@ header #logo_polerones a:link, header #logo_polerones a:visited{width: 216px; he
 #tips .tips_03 h2{background: url(../img/html/img_n_03.gif) no-repeat 0px 0px;}
 #tips .tips_04 h2{background: url(../img/html/img_n_04.gif) no-repeat 0px 0px; color: #00B715;}
 
-#tips .imagen{text-align: center; margin: 0px; padding: 0px; widows: 227px; height: 150px;}
+#tips .imagen{text-align: center; margin: 0px; padding: 0px; width: 227px; height: 150px;}
 
 #tips a:link, #tips a:visited{color: #FFF; text-decoration: none;}
 #tips a:hover, #tips a:active{color: #FFF; text-decoration: underline;}
@@ -103,7 +152,7 @@ header #logo_polerones a:link, header #logo_polerones a:visited{width: 216px; he
 
 /*OTROS SERVICIOS*/
 #otros_servicios{clear: both; margin: 0px; padding: 0px;}
-#otros_servicios article{float: left; width: 444px; margin: 0px; padding: 0px; min-height: 260px;}
+#otros_servicios article{float: left; width: 444px; margin: 0px 0px 10px 0px; padding: 0px; min-height: 260px;}
 #otros_servicios p{margin: 0px; padding: 0px;}
 #otros_servicios ul{margin: 0px; padding: 0px; list-style: none;}
 #otros_servicios ul li{margin: 0px; padding: 0px;}
@@ -119,11 +168,12 @@ header #logo_polerones a:link, header #logo_polerones a:visited{width: 216px; he
 #otros_servicios a:hover, #otros_servicios a:active{color: #FFF; text-decoration: underline;}
 
 
-/*FOOTER*/
-footer{clear: both; margin: 0px auto; min-height: 60px; width: 940px; color: #FF6301; font: bold 22px Arial, Helvetica, sans-serif;}
-footer address{background: url(../img/html/img_direccion.gif) no-repeat 0px 0px; padding: 0px 0px 0px 65px; margin: 0px; font-style: normal; float: left; width: 350px;}
-footer .fono_cel{background: url(../img/html/img_fono_cel.gif) no-repeat 0px 0px; padding: 0px 0px 0px 50px; float: left; width: 250px;}
-footer .fono_fijo{background: url(../img/html/img_fono_fijo.gif) no-repeat 0px 0px; padding: 10px 0px 0px 60px; float: left; width: 150px; min-height: 50px;}
+/*FONOS*/
+#cont_fonos_header{background: #000;clear: both; height: 70px; font: bold 22px Arial, Helvetica, sans-serif;}
+#fonos{width: 900px; margin: 0px auto; padding: 10px 0px 0px 0px; color: #FF6301;}
+#fonos address{background: url(../img/html/img_direccion.gif) no-repeat 0px 0px; padding: 0px 0px 0px 65px; margin: 0px; font-style: normal; float: left; width: 280px;}
+#fonos .fono_cel{background: url(../img/html/img_fono_cel.gif) no-repeat 0px 0px; padding: 0px 0px 0px 50px; float: left; width: 250px;}
+#fonos .fono_fijo{background: url(../img/html/img_fono_fijo.gif) no-repeat 0px 0px; padding: 10px 0px 0px 60px; float: left; width: 150px; min-height: 50px;}
 
 
 /*JQUERY*/
@@ -150,6 +200,31 @@ footer .fono_fijo{background: url(../img/html/img_fono_fijo.gif) no-repeat 0px 0
 #tips .jcarousel-prev-disabled-horizontal:hover,
 #tips .jcarousel-prev-disabled-horizontal:focus,
 #tips .jcarousel-prev-disabled-horizontal:active {background: url(../img/botones/bot_carrusel_left_disabled_footer.gif) no-repeat 0px 0px;}
+
+
+/*ROPA INSTITUCIONAL*/
+#ropa{}
+#ropa h2{font: bold 13px Arial, Helvetica, sans-serif; color: #FFF; margin: 0px; padding: 0px 0px 8px 0px;}
+#ropa h2 strong, #ropa h2 b{font: bold 13px Arial, Helvetica, sans-serif; color: #FF6301;}
+#ropa p{margin: 0px; padding: 0px; width: 320px;}
+
+#ropa .fila{clear: both; margin: 0px 0px 30px 0px; min-height: 300px; padding: 0px;}
+#ropa .fila .columna{background: url(../img/html/img_fondo_ropa.png) no-repeat 0px 0px; margin: 0px 10px 0px 0px; height: 280px; width: 410px; padding: 20px 10px 0px 17px; float: left;}
+#ropa .fila .columna .tabs{background: url(../img/html/bullet.gif) no-repeat 10px 198px #3D3D3D; float: right; width: 67px; height: 208px; padding: 10px 0px 0px 7px; margin: 40px 0px 0px 0px;}
+#ropa .fila .columna .tabs ul{padding: 0px; list-style: none; text-align: center; width: 65px; margin: 0px;}
+#ropa .fila .columna .tabs ul li{margin: 0px 0px 3px 0px; padding: 0px;}
+#ropa .fila .columna .tabs .activo{border: 2px solid #F60;}
+
+
+/*FORMULARIO*/
+#formulario{clear: both; width: 740px; margin: 0px auto;}
+#formulario #col_01{width: 327px; margin: 0px; padding: 0px 60px 0px 0px; float: left;}
+#formulario #col_02{width: 345px; margin: 0px; padding: 0px; float: left;}
+#formulario p{margin: 0px; padding: 0px 0px 10px 0px; clear: both;}
+#formulario label{display: block; margin: 0px; padding: 0px 0px 4px 0px; font: bold 14px Arial, Helvetica, sans-serif;}
+#formulario input{background: #FFF; font: 12px Arial, Helvetica, sans-serif; padding: 4px 0px 0px 5px; width: 322px; height: 24px; border: 1px solid #FFF;}
+#formulario textarea{background: #FFF; font: 12px Arial, Helvetica, sans-serif; padding: 4px 0px 0px 5px; width: 341px; height: 122px; border: 1px solid #FFF;}
+#formulario button{background: url(../img/botones/bot_enviar.png) no-repeat 0px 0px; width: 162px; height: 60px; cursor: pointer; margin: 0px; padding: 0px;}
 
 
 
