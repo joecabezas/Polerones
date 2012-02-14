@@ -1,6 +1,6 @@
 <!--HEADER-->
 <header>
-	<span id="logo_polerones"><a href="index.php">Polerones.com</a></span>
+	<span id="logo_polerones"><?php echo $html->link('Polerones.com', '/') ?></span>
 	<ul>
 		<!-- categories -->
 		<? if(isset($d['Categories'])): ?>
