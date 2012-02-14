@@ -3,6 +3,7 @@ class AppController extends Controller {
 
 	var $components = array('Auth','Session');
 	var $helpers = array('Session','Html','Form');
+	var $uses = array('Category');
 
 	function beforeFilter() {
 
@@ -55,8 +56,24 @@ class AppController extends Controller {
 		}
 	}
 
-	function beforeRender(){
-
+	function beforeRender()
+	{
+		//buscar categorias que deban aparecer en portada
+		$this->Category->recursive = 0;
+		$categories = $this->Category->find(
+			'all',
+			array(
+				'conditions' => array(
+					'Category.is_in_top_menu' => '1',
+				),
+				'order' => array(
+					//'Category.created' => 'DESC'
+				),
+			)
+		);
+		
+		$this->set('top_menu', $categories);
+		
 		if(isset($this->params['prefix'])){
 			switch($this->params['prefix']){
 				case 'admin':

@@ -122,10 +122,33 @@ header ul li#bot_h_04.activo{background: url(../img/botones/bot_contacto_over.gi
 
 /*HOME: TIPS*/
 #banner_home{background: url(../img/html/fondo_banner_home.gif) repeat-x 0px 0px #383838; margin: 0px; clear: both; padding: 0px; line-height: 130%; height: 270px;}
-#banner_home p{margin: 0px; padding: 0px 30px 10px 0px;}
+
+/*joe*/
+#banner_home p{
+	margin-left: 20px;
+	/*padding: 0px 30px 0px 0px;*/
+	font-size: 1.2em;
+	text-align: justify;
+	
+	text-shadow: 2px 2px 5px black;
+}
+
 #banner_home ul{margin: 0px auto; padding: 0px; list-style: none; width: 800px; height: 270px; overflow: hidden;}
 #banner_home ul li{background: url(../img/fotos_banners/img_banner_home_01.jpg) no-repeat 0px 5px; margin: 0px; height: 220px; padding: 50px 0px 0px 550px; float: left;}
-#banner_home button{background: url(../img/botones/bot_cotiza_ahora.png) no-repeat 0px 0px; font-size: 1px; letter-spacing: -1px; margin: 60px 0px 0px -10px; padding: 0px; border: none; cursor: pointer; width: 270px; height: 125px; position: absolute;}
+
+/*joe*/
+#banner_home button{
+	background: url(../img/botones/bot_cotiza_ahora.png) no-repeat 0px 0px;
+	font-size: 1px;
+	letter-spacing: -1px;
+	margin: 40px 0px 0px -10px;
+	padding: 0px; border: none;
+	cursor: pointer;
+	width: 270px;
+	height: 125px;
+	position: absolute;
+}
+
 #banner_home img{border: none;}
 #banner_home a:link, #banner_home a:visited{color: #FFF; text-decoration: none;}
 #banner_home a:hover, #banner_home a:active{color: #FFF; text-decoration: none;}
