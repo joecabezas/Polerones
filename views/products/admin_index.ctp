@@ -55,12 +55,32 @@
 				echo $this->Html->image(
 					DS.'files'.DS.'picture'.DS.'image'.DS.$picture['image_dir'].DS.'chica_'.$picture['image'],
 					array(
+						'url' => $html->url(
+							array(
+								'controller' => 'pictures',
+								'action' => 'delete',
+								$picture['id']
+							),
+							true
+						)
 						//'style' => 'width:30px;height:auto;'
 						//'style' => 'float:right;'
 					)
 				);
 			?>
-
+			<?php
+				echo $html->link(
+					'[Borrar]',
+					array(
+						'controller' => 'pictures',
+						'action' => 'delete',
+						$picture['id']
+					),
+					null,
+					'¿Seguro deseas borrar la foto '.$picture['id'].'?'
+				);
+			?>
+			<br/>
 		<?php endforeach; ?>
 <?php endforeach; ?>
 	<p>

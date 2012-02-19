@@ -11,7 +11,8 @@ class Picture extends AppModel {
 				),
 				'thumbsizes' => array(
 					'grande' => '640w',
-					'chica' => '210x156',
+					'mediana' => '318x218',
+					'chica' => '60x45',
 				),
 				'thumbnailMethod' => 'php',
 			),

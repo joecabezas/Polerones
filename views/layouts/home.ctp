@@ -38,12 +38,14 @@ jQuery(document).ready(function() {
 
 <!--BANNER HOME-->
 <div id="banner_home">
-    <ul>
-      <li id="banner_home_01">
-            <p>En Polerones.com imprimimos tus recuerdos, inmortalizándolos para simpre.<br/><br/>Cotiza hoy con nosotros y ten tu polerón antes de fin de año.</p>
-        	<button title="Cotizar" type="button">Cotizar</button>
-      </li>
-    </ul>
+	<ul>
+		<li id="banner_home_01">
+			<p>En Polerones.com imprimimos tus recuerdos, inmortalizándolos para simpre.<br/><br/>Cotiza hoy con nosotros y ten tu polerón antes de fin de año.</p>
+			<a href="<?php echo $html->url('/contacto') ?>">
+				<button title="Cotizar" type="button">Cotizar</button>
+			</a>
+		</li>
+	</ul>
 </div>
 <!--END BANNER HOME-->
 

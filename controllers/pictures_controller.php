@@ -53,14 +53,33 @@ class PicturesController extends AppController {
 	function admin_delete($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid id for picture', true));
-			$this->redirect(array('action'=>'index'));
+			
+			$this->redirect(
+				array(
+					'controller' => 'products',
+					'action' => 'index'
+				)
+			);
 		}
+		
 		if ($this->Picture->delete($id)) {
 			$this->Session->setFlash(__('Picture deleted', true));
-			$this->redirect(array('action'=>'index'));
+			
+			$this->redirect(
+				array(
+					'controller' => 'products',
+					'action' => 'index'
+				)
+			);
 		}
 		$this->Session->setFlash(__('Picture was not deleted', true));
-		$this->redirect(array('action' => 'index'));
+		
+		$this->redirect(
+			array(
+				'controller' => 'products',
+				'action' => 'index'
+			)
+		);
 	}
 }
 ?>

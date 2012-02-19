@@ -8,6 +8,7 @@ class MainController extends AppController {
 	{
 		$this->layout = 'home';
 		
+/*
 		//traer la lista de ultimas fotos que pertenezcan a productos
 		//cuyos proyectos esten con status = 'Terminado'
 		$this->Picture->recursive = 3;
@@ -43,6 +44,7 @@ class MainController extends AppController {
 		//encapsular todo
 		$d['Pictures'] = $pictures;
 		$this->set('d', $d);
+*/
 	}
 
 	function categoria($category_id = 1)

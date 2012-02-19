@@ -62,7 +62,7 @@ header ul{
 	padding: 26px 0px 0px 0px;
 	float: right;
 	list-style: none;
-	width: 455px;
+	/*width: 455px;*/
 	/*font-size: 1px;*/
 	letter-spacing: -1px;
 	
@@ -141,7 +141,7 @@ header ul li#bot_h_04.activo{background: url(../img/botones/bot_contacto_over.gi
 	background: url(../img/botones/bot_cotiza_ahora.png) no-repeat 0px 0px;
 	font-size: 1px;
 	letter-spacing: -1px;
-	margin: 40px 0px 0px -10px;
+	margin: 20px 0px 0px -10px;
 	padding: 0px; border: none;
 	cursor: pointer;
 	width: 270px;
@@ -233,9 +233,30 @@ header ul li#bot_h_04.activo{background: url(../img/botones/bot_contacto_over.gi
 
 #ropa .fila{clear: both; margin: 0px 0px 30px 0px; min-height: 300px; padding: 0px;}
 #ropa .fila .columna{background: url(../img/html/img_fondo_ropa.png) no-repeat 0px 0px; margin: 0px 10px 0px 0px; height: 280px; width: 410px; padding: 20px 10px 0px 17px; float: left;}
-#ropa .fila .columna .tabs{background: url(../img/html/bullet.gif) no-repeat 10px 198px #3D3D3D; float: right; width: 67px; height: 208px; padding: 10px 0px 0px 7px; margin: 40px 0px 0px 0px;}
+
+/* Joe */
+#ropa .fila .columna .tabs{
+	/*background: url(../img/html/bullet.gif) no-repeat 10px 198px #3D3D3D;*/
+	background: #3D3D3D;
+	float: right;
+	width: 67px;
+	height: 208px;
+	padding: 10px 7px 0px 7px;
+	margin: 38px 0px 0px 0px;
+}
+
 #ropa .fila .columna .tabs ul{padding: 0px; list-style: none; text-align: center; width: 65px; margin: 0px;}
-#ropa .fila .columna .tabs ul li{margin: 0px 0px 3px 0px; padding: 0px;}
+
+/* Joe */
+#ropa .fila .columna .tabs ul li{
+	margin: 0px 0px 7px 0px;
+	padding: 0px;
+}
+
+#ropa .fila .columna .tabs ul li img{
+	box-shadow: 0px 0px 10px black;
+}
+
 #ropa .fila .columna .tabs .activo{border: 2px solid #F60;}
 
 

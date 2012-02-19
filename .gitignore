@@ -1,3 +1,6 @@
 tmp/
+
 webroot/files/
+webroot/img/
+
 *.*~
