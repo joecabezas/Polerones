@@ -82,16 +82,16 @@ class NotificationsComponent extends Object {
 		}
 	}
 
-	function _send($to) {
-
-		//debug('_send');
-		//debug($to);
-		
+	function _send($to)
+	{
 		$this->Email->to = $to['mail'];
 
 		$this->Email->subject = $this->config['subject'];
 		$this->Email->replyTo = $this->from['mail'];
 		$this->Email->from = $this->from['mail'];
+		
+		if(isset($this->attachments))
+			$this->Email->attachments = $this->attachments;
 
 		$this->Email->template = $this->config['template']; // note no '.ctp'
 		//Send as 'html', 'text' or 'both' (default is 'text')
@@ -106,35 +106,11 @@ class NotificationsComponent extends Object {
 		$data['from'] = $this->from;
 		$data['to'] = $to;
 		
-		//debug($data);
-		
 		$this->controller->set('data', $data);
 
 		//Do not pass any args to send()
 		$this->Email->send();
 	}
-
-	/*
-	function &getModel($name = null) {
-		$model = null;
-		if (!$name) {
-			$name = $this->userModel;
-		}
-
-		if (PHP5) {
-			$model = ClassRegistry::init($name);
-		} else {
-			$model =& ClassRegistry::init($name);
-		}
-
-		if (empty($model)) {
-			trigger_error(__('Notifications::getModel() - Model is not set or could not be found', true), E_USER_WARNING);
-			return null;
-		}
-
-		return $model;
-	}
-	*/
 }
 
 ?>

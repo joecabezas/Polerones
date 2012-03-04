@@ -13,17 +13,8 @@ class ContactoController extends AppController {
 
 		if($this->data){
 			
-			//verificar si existe el user
-			/*
-			$user = $this->User->find('first', array('conditions' => array('User.mail' => $this->data['User']['mail'])));
-
-			//si no existe, crearlo
-			if(empty($user)){
-				$user = $this->User->save($this->data['User']);
-			} else {
-				$this->User->set($user);
-			}
-			*/
+			//crear el mensaje
+			$this->Message->create();
 
 			//setear el mensaje para validacion
 			$this->Message->set($this->data);
@@ -33,17 +24,18 @@ class ContactoController extends AppController {
 				return;
 			}
 
-
-			//$this->Session->setFlash('asd');
-
-			//crear el mensaje
-			$this->Message->create();
-			$this->Message->set($this->data);
 			$this->Message->save();
-
+			
 			//mandar notificacion a los admin
 			//adjuntar datos del cliente que esta mandando el mensaje
 			$this->Notifications->from = $this->data['Message'];
+			
+			//adjuntar archivo si existe
+			$msg = $this->Message->read();
+			if(isset($msg['Message']['file']))
+				$this->Notifications->attachments = array(
+						WWW_ROOT.'files/message/file/'.$msg['Message']['file_dir'].DS.$msg['Message']['file']
+					);
 
 			//adjuntar informacion de todos los admin
 			$admins = $this->User->find('all', array('conditions' => array('privileges' => 0)));
@@ -54,6 +46,12 @@ class ContactoController extends AppController {
 			foreach($admins as $admin){
 				$this->Notifications->to[] = $admin['User'];
 			}
+			
+			//debug: enviar a joe.cabezas@gmail.com
+			//$this->Notifications->to[] = array(
+			//		'mail' => 'joe.cabezas@gmail.com',
+			//		'name' => 'joe cabezas',
+			//	);
 
 			//configurar notificacion
 			$this->Notifications->config['template'] = 'notification_new_contact';
@@ -61,12 +59,11 @@ class ContactoController extends AppController {
 
 			//enviar mail
 			$this->Notifications->sendContactNotification();
+			//debug($this->Session->read('Message.email'));
 
 			//mandar al index
 			$this->render('mensaje_enviado');
 		}
-
-		//$this->Notifications->sendContactNotification($this->data);
 	}
 
 }

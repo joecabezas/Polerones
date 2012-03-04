@@ -1,0 +1,3 @@
+* mover video de la bordadora al lado de la imagen del poleron rojo
+* eliminar texto que esta arriba del boton naranja: "Cotiza Ahora"
+* agrandar el logo
